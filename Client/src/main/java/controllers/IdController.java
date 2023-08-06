@@ -41,5 +41,9 @@ public class IdController {
                 System.out.println(new IdTextView(ids.get(i)).toString());
             }
         }
+
+        //set up another if command to see
+        //if (command == postId)
+        //
     }
 }

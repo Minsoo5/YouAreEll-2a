@@ -39,6 +39,7 @@ public class MessageController {
     }
 
     public void doCommand(Command cmd) {
+        //Can only pull 21 messages ... but why...
         if (cmd.getCmd() == Command.Verb.GETMESG) {
             List<Message> msgs = tctrl.getMessages();
             for (int i = 0; i < 10; i++) {
@@ -49,5 +50,20 @@ public class MessageController {
             Message result = tctrl.postMessage(cmd.getArg(1), cmd.getArg(2), cmd.getRest(3));
             System.out.println(new MessageTextView(result).toString());
         }
+
+
+        if (cmd.getCmd() == Command.Verb.GETMESGBYID) {
+            List<Message> msgs = tctrl.getMessages();
+            List<Message> msgsById = getMessagesForId(cmd.getArg(1));
+            int index = 0;
+            while (index < msgs.size()) {
+                if ()
+            }
+
+
+
+        }
     }
+
+
 }
